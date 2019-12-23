@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  graalvm:
+    build: docker
+    volumes:
+      - .:/working
+      - gradle_cache:/root/.gradle
+    working_dir: /working
+
+volumes:
+  gradle_cache:

@@ -1,0 +1,41 @@
+[
+  {
+    "type": "decl",
+    "name": "Main$double",
+    "expr": {
+      "type": "lambda",
+      "arg": "x",
+      "body": {
+        "type": "plus",
+        "e1": { "type": "arg", "name": "x" },
+        "e2": { "type": "arg", "name": "x" }
+      }
+    }
+  },
+  {
+    "type": "decl",
+    "name": "Main$inc",
+    "expr": {
+      "type": "lambda",
+      "arg": "a",
+      "body": {
+        "type": "plus",
+        "e1": { "type": "arg", "name": "a" },
+        "e2": { "type": "int", "value": 1 }
+      }
+    }
+  },
+  {
+    "type": "decl",
+    "name": "Main$main",
+    "expr": {
+      "type": "call",
+      "fn": { "type": "var", "name": "Main$double" },
+      "arg": {
+        "type": "call",
+        "fn": { "type": "var", "name": "Main$inc" },
+        "arg": { "type": "int", "value": 5 }
+      }
+    }
+  }
+]
